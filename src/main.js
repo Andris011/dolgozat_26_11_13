@@ -34,8 +34,8 @@ function show()
   delete_button.className = "btn btn-danger"
   
   delete_button.addEventListener("click", () => {
-    data.splice(data.indexOf, 0);
-    show
+    data.splice(data.indexOf, 1);
+    show();
   })
 
   let cardText = document.createElement("p");
