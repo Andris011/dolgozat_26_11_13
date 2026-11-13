@@ -14,6 +14,8 @@ function show()
   let place = document.getElementById("cards");
   place.innerHTML = "";
 
+  let sumPrice = 0;
+
   for (const elem in data)
   {
     console.log(data[elem])
@@ -36,6 +38,8 @@ function show()
   delete_button.addEventListener("click", () => {
     data.splice(data.indexOf, 1);
     show();
+
+    sumPrice += data[elem].ar;
   })
 
   let cardText = document.createElement("p");
@@ -48,6 +52,16 @@ function show()
   cardDiv.appendChild(cardbodyDiv);
 
   place.appendChild(cardDiv);
+
+  let statisztikaHely = document.getElementById("statisztika");
+  statisztikaHely.innerHTML = ""
+
+  let numberOfElements = document.createElement("p")
+
+  numberOfElements.innerHTML = data.length;
+  
+  statisztikaHely.appendChild(numberOfElements);
+  statisztikaHely.appendChild(sumPrice);
 
 
   }
