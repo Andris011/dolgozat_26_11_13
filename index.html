@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dolgozat</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container mb-5">
+        <form>
+          <input id="id" placeholder="id"/>
+          <input id="nev" placeholder="név"/>
+          <input id="kategoria" placeholder="kategória"/>
+          <input id="ev" type="number" placeholder="év"/>
+          <input id="ar" type="number" placeholder="ár"/>
+          <button id="form_send" class="btn btn-primary">Hozzáadás</button>
+        </form>
+      </div>
+    </div>
+    <div class="container-md mb-5">
+      <div id="cards"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
